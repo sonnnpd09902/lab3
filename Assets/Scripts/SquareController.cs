@@ -46,6 +46,13 @@ public class SquareController : MonoBehaviour
             Vector2 firstPosition = new Vector2(-7, 1);
             transform.position = firstPosition;
         }
+        if (collision.gameObject.tag.Equals("Pinwheel"))
+        {
+            Debug.Log("xxxx");
+            Vector2 firstPosition = new Vector2(-7, 1);
+            transform.position = firstPosition;
+        }
+
         if (collision.gameObject.name.Equals("Box"))
         {
             Debug.Log("Win");
@@ -53,3 +60,4 @@ public class SquareController : MonoBehaviour
         }
     }
 }
+
