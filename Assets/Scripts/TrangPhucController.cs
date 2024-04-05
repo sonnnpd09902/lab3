@@ -1,40 +1,25 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class TrangPhucController : MonoBehaviour
 {
-    public GameObject trangPhuc;
+    public GameObject TrangPhuc;
+    // Start is called before the first frame update
     void Start()
     {
-        HideMenu();
+        // Đăng ký sự kiện
+        UnityEngine.UI.Button button = GetComponent<UnityEngine.UI.Button>();
+        button.onClick.AddListener(OnClick);
     }
 
-
-    void Update()
+    void OnClick()
     {
-        if (Input.GetKeyDown(KeyCode.A))
-        {
-            if (trangPhuc.activeSelf)
-            {
-                HideMenu();
-            }
-            else
-            {
-                ShowMenu();
-            }
-        }
+        ShowMenu();
+        // Viết mã xử lý bạn muốn thực hiện khi nút được nhấn ở đây
     }
-
-    void ShowMenu()
+    public void ShowMenu()
     {
-        trangPhuc.SetActive(true);
-        Time.timeScale = 0f;
-    }
-
-    void HideMenu()
-    {
-        trangPhuc.SetActive(false);
-        Time.timeScale = 1f;
+        TrangPhuc.SetActive(true); // Hiển thị Menu
     }
 }
