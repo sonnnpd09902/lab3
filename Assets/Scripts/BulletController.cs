@@ -25,7 +25,13 @@ public class BulletController : MonoBehaviour
             ScoreController.Instance.IncreaseScore(scoreValue);
             Destroy(collision.gameObject); // Đối tượng bị bắn
             Destroy(gameObject); // Viên đạn
+        }
+        if (collision.gameObject.tag.Equals("Pinwheel"))
+        {
 
+            ScoreController.Instance.IncreaseScore(scoreValue);
+            Destroy(collision.gameObject); // Đối tượng bị bắn
+            Destroy(gameObject); // Viên đạn
         }
 
 
