@@ -8,7 +8,7 @@ public class FirstLevel : MonoBehaviour
     public PlayerData playerData;
     void Start()
     {
-        PlayerPrefs.SetInt("PlayerLevel", 1);
+        PlayerPrefs.SetInt("PlayerLevel", 0);
         PlayerPrefs.SetInt("PlayerScore", 0);
     }
 

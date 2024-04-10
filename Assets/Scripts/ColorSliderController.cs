@@ -1,25 +1,17 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+
 public class ColorSliderController : MonoBehaviour
 {
-    // Start is called before the first frame update
     public Slider slider;
-    private bool isGameOver = false;
-    public Canvas gameOverCanvas;
+
+    // Scene name for the Game Over scene
+    public string gameOverSceneName = "GameOverScene";
+
     private void Start()
     {
         slider.value = 10f;
-        gameOverCanvas.gameObject.SetActive(false);
-    }
-
-    void Update()
-    {
-        if (!isGameOver && slider.value <= 0)
-        {
-            GameOver();
-        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -27,16 +19,23 @@ public class ColorSliderController : MonoBehaviour
         if (collision.gameObject.CompareTag("Trap"))
         {
             Debug.Log("Trap");
-            slider.value--;
+            DecreaseSliderValue(1);
         }
     }
 
-
-    void GameOver()
+    void Update()
     {
-        isGameOver = true;
-        gameOverCanvas.gameObject.SetActive(true);
+        // Check if slider value reaches 0
+        if (slider.value <= 0)
+        {
+            // Load the Game Over scene
+            SceneManager.LoadScene(gameOverSceneName);
+        }
     }
 
-
+    // Decrease slider value by specified amount
+    private void DecreaseSliderValue(float amount)
+    {
+        slider.value = Mathf.Max(slider.value - amount, 0f);
+    }
 }
