@@ -454,11 +454,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b80212c2033bcb242ade80686ddc778c, type: 3}
---- !u!1 &586780311 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2565036551296350818, guid: f11e69b18b45a4746b31413c45ace8d9, type: 3}
-  m_PrefabInstance: {fileID: 1184042627}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &661342553 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2904962519960098723, guid: f11e69b18b45a4746b31413c45ace8d9, type: 3}
@@ -484,7 +479,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2242478952430781558, guid: 71438a02ccd6f9542a64f6e16a8ee3d1, type: 3}
       propertyPath: m_Size.x
-      value: 0.24364878
+      value: 0.12650818
       objectReference: {fileID: 0}
     - target: {fileID: 2242478952430781558, guid: 71438a02ccd6f9542a64f6e16a8ee3d1, type: 3}
       propertyPath: m_Size.y
@@ -492,7 +487,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2242478952430781558, guid: 71438a02ccd6f9542a64f6e16a8ee3d1, type: 3}
       propertyPath: m_Offset.x
-      value: 0.2631756
+      value: 0.20460531
       objectReference: {fileID: 0}
     - target: {fileID: 2242478952430781558, guid: 71438a02ccd6f9542a64f6e16a8ee3d1, type: 3}
       propertyPath: m_Offset.y
@@ -735,6 +730,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TrangPhuc
       objectReference: {fileID: 0}
+    - target: {fileID: 6227988737071592212, guid: d34fa53697aa1cb4588c69a54273ac37, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -752,6 +751,7 @@ GameObject:
   - component: {fileID: 1058636348}
   - component: {fileID: 1058636351}
   - component: {fileID: 1058636350}
+  - component: {fileID: 1058636352}
   m_Layer: 0
   m_Name: Map
   m_TagString: Untagged
@@ -839,6 +839,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeText: {fileID: 661342553}
+  totalTime: 10
+  playerData: {fileID: 11400000, guid: 22643ae31c248264184c933874c0f628, type: 2}
 --- !u!114 &1058636351
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -851,8 +853,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bee50ab5a2b952a46a32fc1955cec920, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  menuCanvas: {fileID: 586780311}
-  trangPhuc: {fileID: 62853231}
+  menuChinh: {fileID: 1184042628}
+  playerData: {fileID: 11400000, guid: 22643ae31c248264184c933874c0f628, type: 2}
+  Level: {fileID: 1184042630}
+  Score: {fileID: 1184042629}
+--- !u!114 &1058636352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1058636347}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83dee3876424dce4d82f604920fc0f72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerData: {fileID: 11400000, guid: 22643ae31c248264184c933874c0f628, type: 2}
 --- !u!1001 &1184042627
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -954,6 +971,33 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f11e69b18b45a4746b31413c45ace8d9, type: 3}
+--- !u!1 &1184042628 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2565036551296350818, guid: f11e69b18b45a4746b31413c45ace8d9, type: 3}
+  m_PrefabInstance: {fileID: 1184042627}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1184042629 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8725401799598851015, guid: f11e69b18b45a4746b31413c45ace8d9, type: 3}
+  m_PrefabInstance: {fileID: 1184042627}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1184042630 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1168037419851170251, guid: f11e69b18b45a4746b31413c45ace8d9, type: 3}
+  m_PrefabInstance: {fileID: 1184042627}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1349788046
 GameObject:
   m_ObjectHideFlags: 0
@@ -1399,6 +1443,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -4717305424651264695, guid: 8a476adef054cf7439ffc8babe1544da, type: 3}
+      propertyPath: gameOverCanvas
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 493386319964309387, guid: 8a476adef054cf7439ffc8babe1544da, type: 3}
       propertyPath: m_Size.x
       value: 0.15862319

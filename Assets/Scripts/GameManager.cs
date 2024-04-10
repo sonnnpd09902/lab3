@@ -16,7 +16,7 @@ public class GameManager : MonoBehaviour
             playerData = ScriptableObject.CreateInstance<PlayerData>();
 
             // Khởi tạo giá trị cho màn chơi đầu tiên
-            playerData.playerLevel = 0;
+            playerData.playerLevel = 1;
             // Khởi tạo giá trị đầu tiên cho điểm số
             playerData.playerScore = 0;
 
